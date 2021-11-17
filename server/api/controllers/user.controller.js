@@ -2,6 +2,8 @@ const User = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+const {setError} = require("../../utils/error.util")
+
 const getAllUsers = async (req, res, next) => {
     try {
         const users = await User.find().populate("book")
@@ -23,6 +25,8 @@ const register = async (res, req, next) => {
         newUser.password = req.body.name;
         newUser.books = [];
 
+        const userExist = await User.findOne({email: newUser.email});
+        if(userExist) return next(setError(400, 'El usuario ya existe'));
         const userDb = await newUser.save();
 
         return res.json({
@@ -53,7 +57,10 @@ const login = async (res, req, next) => {
                 message: "Todo Ok, has logueado tu usuario",
                 data: { user: userInfo, token: token }
             });
-        } 
+        } else {
+            const error = setError(500, 'Oooopps');
+            return res.json ({status: error.code, message: error.message, data:null})
+        }
     } catch (error) {
         return next(error);
     }
