@@ -5,14 +5,17 @@ const dotenv = require ("dotenv");
 const { connect } = require("./config/db");
 const { setError } = require("./utils/error.util");
 
-const user = require("./api/routes/user.route");  //! Se modifica esta linea para añadir nuevas rutas
+const user = require("./api/routes/user.route");
+const book = require("./api/routes/book.route");  //! Se modifica esta linea para añadir nuevas rutas
 
 dotenv.config();
 connect();
 
 const app = express();
 
-const PORT = process.env.PORT || 4000;
+app.set("secretKey", "myApp");
+
+const PORT = 4000;
 
 app.use((req, res, next) =>{
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, PATCH");
@@ -27,10 +30,14 @@ app.use(
         credentials: true,
     })
 );
-
-app.use(express.urlencoded({ extended: true }));
+app.use(
+    express.urlencoded({ extended: true })
+);
+    
+app.use(express.json());
 
 app.use("/user", user); //! En esta línea se requieren las nuevas rutas añadidas en la línea superior
+app.use("/book", book);
 
 app.use('*',( req, res, next) => {
     return next(setError(404, 'Route not found'))
@@ -42,6 +49,6 @@ app.use((error, req, res, next) => {
 
 app.disable('x-powered-by');
 
-app.listen(3500, () => {
+app.listen(PORT, () => {
     console.log(`Server listening on http://localhost:${PORT}`);
 });

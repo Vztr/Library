@@ -15,7 +15,7 @@ const createBook = async (req, res, next) => {
         return res.json({
             status: 201,
             message: "Todo Ok, has creado un libro",
-            data: { user: bookDb.name }
+            data: { name: bookDb.name }
         })
 
     } catch (error) {
@@ -25,7 +25,7 @@ const createBook = async (req, res, next) => {
 
 const getAllBooks = async (req, res, next) => {
     try {
-        const books = await Book.find().populate("books");
+        const books = await Book.find()/* .populate("books") */;
 
         return res.json({
             status: 200,

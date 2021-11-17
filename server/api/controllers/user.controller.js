@@ -17,29 +17,27 @@ const getAllUsers = async (req, res, next) => {
     }
 }
 
-const register = async (res, req, next) => {
+const register = async (req, res, next) => {
     try {
-        const newUser = new User();
-        newUser.name = req.body.name;
-        newUser.email = req.body.name;
-        newUser.password = req.body.name;
-        newUser.books = [];
+      const newUser = new User();
+      newUser.name = req.body.name;
+      newUser.email = req.body.email;
+      newUser.password = req.body.password;
+      newUser.books = [];
+  
+      const userDb = await newUser.save();
 
-        const userExist = await User.findOne({email: newUser.email});
-        if(userExist) return next(setError(400, 'El usuario ya existe'));
-        const userDb = await newUser.save();
-
-        return res.json({
-            status: 201,
-            message: "Todo Ok, has creado un usuario",
-            data: { user: userDb.name }
-        });
-    } catch (error) {
-        return next(error);
+      return res.json({
+        status: 201,
+        message: "Has crado un usuario",
+        data: {user: userDb}
+      });
+    } catch (err) {
+      return next(err);
     }
-}
+  }
 
-const login = async (res, req, next) => {
+const login = async (req, res, next) => {
     try {
         const userInfo = await User.findOne({ email: req.body.email });
         if (bcrypt.compareSync(req.body.password, userInfo.password)) {
@@ -66,7 +64,7 @@ const login = async (res, req, next) => {
     }
 }
 
-const logout = async (res, req, next) => {
+const logout = async (req, res, next) => {
     try {
         return res.json({
             status: 201,

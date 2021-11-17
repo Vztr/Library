@@ -1,24 +1,48 @@
-const jwt = require("jsonwebtoken");
-const User = require("../api/models/user.model");
-const setError = require("../utils/error.util")
+const jwt = require("jsonwebtoken")
 
-const isAuth = async(req, res, next) => {
-    try {
-        const token = req.headers.authorization;
-        if (!token) {
-            return next(setError(404, 'Unauthorized'));
-        }
-        const parsedToken = token.replace('Bearer', '');
-        const validToken = jwt.verify(parsedToken, process.env.JWT_SECRET);
-        const userLogued = await User.findById(validToken.id);
+const isAuth = (req, res, next) => {
 
-        userLogued.password = null;
-        req.user = userLogued;
-        next();
+    const authorization = req.headers.authorization
 
-    } catch (error) {
-        return next(error);
+    if (!authorization) {
+        return res.json({
+            status: 401,
+            message: "No hay authorization",
+            data: null
+        })
     }
+
+    const splits = authorization.split(" ")
+    if (splits.length != 2 || splits[0] != "Bearer") {
+        return res.json({
+            status: 400,
+            message: "Bearer correcto",
+            data: null
+        })
+    }
+
+    const jwtString = splits[1]
+
+    try {
+
+        var token = jwt.verify(jwtString, req.app.get("secretKey"));
+
+
+    } catch (err) {
+
+        return next(err)
+    }
+
+    const authority = {
+        id: token.id,
+        name: token.name
+    }
+
+    req.authority = authority
+
+    next()
 }
 
-module.exports = { isAuth };
+module.exports = {
+    isAuth,
+}
