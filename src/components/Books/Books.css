@@ -1,0 +1,18 @@
+a {
+    text-decoration: none;
+    border: 2px solid #3352ff;
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin-top: 10px;
+    color: #3352ff;
+}
+
+a:hover {
+    text-decoration: none;
+    border: 2px solid #3352ff;
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin-top: 10px;
+    color: #ffffff;
+    background-color:#3352ff;
+}

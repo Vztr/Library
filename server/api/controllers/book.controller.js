@@ -9,6 +9,7 @@ const createBook = async (req, res, next) => {
         newBook.name = req.body.name;
         newBook.author = req.body.author;
         newBook.book = book;
+        newBook.cover = req.body.cover;
         newBook.year = req.body.year;
         newBook.editorial = req.body.editorial;
 

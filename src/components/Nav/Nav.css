@@ -1,0 +1,17 @@
+a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+a:hover {
+   text-decoration: none;
+   color: #ffffff;
+   background-color: transparent;
+   margin: 20px 0px;
+   cursor: pointer;
+   font-weight: 500;
+}

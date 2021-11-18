@@ -1,9 +1,10 @@
 import React from "react";
 import Gallery from "../../components/Gallery/Gallery";
+import './Books.css';
+
 const Books = () => {
   return (
     <div>
-      <h1>Books</h1>
       <Gallery />
     </div>
   );
