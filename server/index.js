@@ -8,8 +8,16 @@ const { setError } = require("./utils/error.util");
 const user = require("./api/routes/user.route");
 const book = require("./api/routes/book.route");  //! Se modifica esta linea para añadir nuevas rutas
 
+const cloudinary = require("cloudinary").v2
+
 dotenv.config();
 connect();
+
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.CLOUD_KEY,
+    api_secret: process.env.CLOUD_SECRET
+});
 
 const app = express();
 
@@ -26,7 +34,7 @@ app.use((req, res, next) =>{
 
 app.use(
     cors({
-        origin: [process.env.CORS_REACT, process.env.CORS_ANGULAR],
+        origin: ["http://localhost:3000", "http://localhost:4000"],
         credentials: true,
     })
 );

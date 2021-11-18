@@ -1,12 +1,14 @@
 const Book = require("../models/book.model");
+const fs = require ("fs");
 
 
 const createBook = async (req, res, next) => {
     try {
+        let book = req.file ? req.file.url: null;
         const newBook = new Book();
         newBook.name = req.body.name;
         newBook.author = req.body.author;
-        newBook.cover = req.body.cover;
+        newBook.book = book;
         newBook.year = req.body.year;
         newBook.editorial = req.body.editorial;
 
@@ -53,4 +55,17 @@ const getBookById = async (req, res, next) => {
     }
 }
 
-module.exports = { createBook, getAllBooks, getBookById };
+const deleteBook = async (req, res, next) => {
+    try {
+        const {bookId} = req.params;
+        await Book.findByIdAndDelete(bookId);
+        return res.json ({
+            status: 200,
+            message: "Libro borrado con éxito"
+        })
+    } catch (error) {
+        return next(error)
+    }
+}
+
+module.exports = { createBook, getAllBooks, getBookById, deleteBook };

@@ -22,14 +22,9 @@ const isAuth = (req, res, next) => {
     }
 
     const jwtString = splits[1]
-
     try {
-
         var token = jwt.verify(jwtString, req.app.get("secretKey"));
-
-
     } catch (err) {
-
         return next(err)
     }
 

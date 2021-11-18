@@ -3,7 +3,7 @@
     height: 60px;
     display: flex;
     justify-content: space-around;
-    background-color: #242424;
+    background-color: #000000;
 }
 
 .nav a {
@@ -11,9 +11,19 @@
      color: #ffffff;
      background-color: transparent;
      margin: 20px 0px;
-     border-radius: 15px;
      cursor: pointer;
+     font-weight: 200;
 }
+
+.nav a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
 /* 
 .nav a:hover {
     background-color: #ffffff;
