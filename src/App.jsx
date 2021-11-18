@@ -9,6 +9,7 @@ const App = () => {
   const [user, setUser] = useState(null);
   const saveUser = user => {
     setUser(user);
+    console.log(user.name, "User en app");
   };
 
   return (
