@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { loginUser } from "../../api/fetch_user";
 import { UserContext } from "../../App";
+import "../Login/Login.css"
 
 const LoginForm = () => {
   const { user, saveUser } = useContext(UserContext);
@@ -29,10 +30,18 @@ const LoginForm = () => {
   return (
     <>
       <div>
-        <form onSubmit={submitForm}>
-          <input type="text" name="email" placeholder="E-mail" />
-          <input type="password" name="password" placeholder="Contraseña" />
-          <button type="submit">Login</button>
+        <form className="login" onSubmit={submitForm}>
+        <div className="form-group">
+        👤
+          <input className="input" type="text" name="email" placeholder="E-mail" />
+        </div>
+        <div>  
+        🔑
+          <input className="input" type="password" name="password" placeholder="Contraseña" />
+        </div>  
+        <div>
+          <button className="button" type="submit">LOGIN</button>
+        </div>
         </form>
       </div>
     </>

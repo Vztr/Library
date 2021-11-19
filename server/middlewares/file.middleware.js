@@ -23,6 +23,7 @@ const VALID_FILE_TYPES = [
     "image/jpg",
     "image/jpeg",
     "image/png"
+    
 ];
 
 const fileFilter = (req, file, cb) => {

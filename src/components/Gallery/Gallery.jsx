@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import getBooks from "../../api/fetch_books";
+import "../Gallery/Gallery.css"
 
 const Gallery = () => {
     useEffect(() => {

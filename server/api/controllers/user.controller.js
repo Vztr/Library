@@ -21,6 +21,7 @@ const register = async (req, res, next) => {
     try {
       const newUser = new User();
       newUser.name = req.body.name;
+      newUser.lastname = req.body.lastname;
       newUser.email = req.body.email;
       newUser.password = req.body.password;
       newUser.books = [];
