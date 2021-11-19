@@ -1,9 +1,11 @@
 import React from 'react'
+import './Home.css'
 
 const Home = () => {
     return (
         <><div className="Home_Container">
-            <img src="https://i.imgur.com/pdDQQpE.png" alt="Background"></img>
+            <img style={{width:"100%", margin:0, padding:0}} src="https://i.imgur.com/pdDQQpE.png" alt="Background"></img>
+            <img style={{width:"40%", display:"block", marginLeft:"auto", marginRight:"auto"}} src="https://i.imgur.com/B4Qtt6G.png" alt="Background"></img>
         </div>
             <div className="text">
                 <p><strong>Descripción del proyecto:</strong></p>

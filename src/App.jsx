@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import { Link, Route, BrowserRouter as Router } from "react-router-dom";
+import { NavLink, Route, BrowserRouter as Router } from "react-router-dom";
 import { Home, Books, Form, Login } from "./components/Main";
 
 export const UserContext = React.createContext(null);
@@ -16,10 +16,10 @@ const App = () => {
     <Router>
       <UserContext.Provider value={{ user, saveUser }}>
         <nav className="nav">
-          <Link to="/"><a href=" "><img src="Logo.png" alt="logo"></img></a></Link>
-          <Link to="/books"><a href=" ">Books</a></Link>
-          <Link to="/form"><a href=" ">Register</a></Link>
-          <Link to="/login"><a href=" ">Login</a></Link>
+          <NavLink to="/"><img style={{width:"20%", display:"block", margin:"auto"}} src="https://i.imgur.com/LWsPh0q.png" alt="logo"></img></NavLink>
+          <NavLink to="/books">Books</NavLink>
+          <NavLink to="/form">Register</NavLink>
+          <NavLink to="/login">Login</NavLink>
         </nav>
         <main>
           <Route exact path="/" component={Home} />
