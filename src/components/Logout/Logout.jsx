@@ -1,17 +1,17 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
-import { useContext } from "react";
+
+import React, { useContext } from "react";
+import { UserContext } from "../../App";
 
 
-const logout = () => setUser(null);
+const Logout = () =>{
 
+  const {user} = useContext(UserContext);
 
-function LogoutButton({ logout, history }) {
-  const handleClick = () => {
-    logout();
-    history.push("/");
-  };
-  return <button onClick={handleClick}>Logout</button>;
+  window.location.href = "/";
+
+  localStorage.clear();
+
+  return <React.Fragment></React.Fragment>;
 }
 
-export default withRouter(LogoutButton);
+export default Logout;

@@ -17,7 +17,7 @@ const createBook = async (req, res, next) => {
 
         return res.json({
             status: 201,
-            message: "Todo Ok, has creado un libro",
+            message: "Todo Ok, has subido tu poster",
             data: { name: bookDb.name }
         })
 

@@ -15,10 +15,6 @@ const storage = multer.diskStorage({
 });
 
 const VALID_FILE_TYPES = [
-    //!  L I B R O S
-    "application/epub+zip",
-    "application/pdf",
-    "application/x-mobipocket-ebook",
     //!  I M A G E N E S
     "image/jpg",
     "image/jpeg",

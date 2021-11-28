@@ -3,14 +3,14 @@ const BASE_URL = "http://localhost:4000";
 const BOOKS = `${BASE_URL}/book`;
 
 const token = localStorage.getItem("token");
-const tokenParsed = token.replaceAll('"', "");
+/* const tokenParsed = token.replaceAll('"', ""); */
 
 const getBooks = async () => {
   const headers = {
     Accept: "application/json",
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
-    "Authorization": `Bearer ${tokenParsed}`
+    "Authorization": `Bearer ${token}`
   };
 
   const books = await fetch(BOOKS, {
