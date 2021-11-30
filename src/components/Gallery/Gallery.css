@@ -1,19 +1,20 @@
 
-
 .Container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 60px; 
+    margin-left: 120px;
+    margin-right: 120px;
 }
 
 .List_books {    
     width: 100%;
-    margin: auto;
     font-size: 18px;
     text-align: center;
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: space-around;
 }
 
@@ -22,4 +23,51 @@
     width: 100%;
     height: auto;
     margin: 0px 40px 0px 40px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+h4 {
+    text-align: center;
+    letter-spacing: 0.75 px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: auto;
+}
+
+p {
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+a {
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    position:relative;
+    transition:0.5s color ease;
+    text-decoration:none;
+    color:#141414;
+    font-size: 17px;
+    border: 2px solid #ff207d;
+    border-radius: 5px;
+    padding: 3px;
+    margin-top: 10px;
+}
+a:hover{
+    color:#ffffff;
+    background-color: #ff207d;
+    transition:0.5s color ease;
+}
+
+a:after {
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
 }

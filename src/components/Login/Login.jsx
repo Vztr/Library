@@ -29,19 +29,19 @@ const LoginForm = () => {
 
   return (
     <>
-      <div>
+      <div className="login-container">
         <form className="login" onSubmit={submitForm}>
-        <div className="form-group">
-        👤
-          <input className="input" type="text" name="email" placeholder="E-mail" />
-        </div>
-        <div>  
-        🔑
-          <input className="input" type="password" name="password" placeholder="Contraseña" />
-        </div>  
-        <div>
-          <button className="button" type="submit">LOGIN</button>
-        </div>
+          <div className="form-group">
+            <label>👤</label>
+            <input className="input" type="text" name="email" placeholder="E-mail" />
+          </div>
+          <div>
+            <label>🔑</label>
+            <input className="input" type="password" name="password" placeholder="Contraseña" />
+          </div>
+          <div>
+            <button className="button" type="submit">LOGIN</button>
+          </div>
         </form>
       </div>
     </>

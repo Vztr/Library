@@ -22,11 +22,11 @@ const Gallery = () => {
                 {books.map((book) => {
                     return (
                         /* <ul className="List_books" key={JSON.stringify(book)}> */
-                            <li className="List_books_item" key={JSON.stringify(book)}>
-                                <img src={book.cover} alt="Cover" />
+                            <li className="List_poster_item" key={JSON.stringify(book)}>
+                                <img src={book.cover} alt="Cover"/>
                                 <h4>{book.name}</h4>
-                                <h4>{book.year}</h4>
-                                <a href={book.book}>PDF</a>
+                                <p>{book.author}</p>
+                                <a href={book.cover}>Download</a>
                             </li>
                         /* </ul> */
                     );

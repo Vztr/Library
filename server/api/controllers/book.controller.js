@@ -1,30 +1,23 @@
 const Book = require("../models/book.model");
-const fs = require ("fs");
-
+const HTTPSTATUSCODE = require("../../utils/httpStatusCode");
 
 const createBook = async (req, res, next) => {
     try {
-        let book = req.file ? req.file.url: null;
         const newBook = new Book();
         newBook.name = req.body.name;
         newBook.author = req.body.author;
-        newBook.book = book;
         newBook.cover = req.body.cover;
-        newBook.year = req.body.year;
-        newBook.editorial = req.body.editorial;
 
         const bookDb = await newBook.save();
-
         return res.json({
             status: 201,
-            message: "Todo Ok, has subido tu poster",
-            data: { name: bookDb.name }
+            message: HTTPSTATUSCODE[201],
+            data: { book: bookDb.name }
         })
-
     } catch (error) {
         return next(error);
     }
-}
+  }
 
 const getAllBooks = async (req, res, next) => {
     try {

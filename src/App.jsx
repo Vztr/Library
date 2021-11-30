@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import './App.css';
 import { NavLink, Redirect,  Route, BrowserRouter as Router } from "react-router-dom";
-import { Home, Books, Form, Login, Logout } from "./components/Main";
+import { Home, Books, Form, Login, Logout, Footer } from "./components/Main";
+import './App.css';
 
 export const UserContext = React.createContext(null);
 
@@ -18,7 +18,7 @@ const App = () => {
       <UserContext.Provider value={{ user, saveUser }}>
         <nav className="nav">
           <NavLink to="/"><img style={{width:"20%", display:"block", margin:"auto"}} src="https://i.imgur.com/LWsPh0q.png" alt="logo"></img></NavLink>
-          <>{ user ? (<NavLink to="/books">Posters</NavLink>) : null}</>
+          <>{ user ? (<NavLink to="/books">Books</NavLink>) : null}</>
           <>{ user ? (<NavLink to="/logout">Logout</NavLink>) : null}</>
           <>{!user ? (<NavLink to="/form">Register</NavLink>) : null}</>
           <>{!user ? (<NavLink to="/login">Login</NavLink>) : null}</>
@@ -31,6 +31,7 @@ const App = () => {
             return user ? <Redirect to='/' /> : <Login/>
           }} />
           <Route path="/login" component={Login} />
+          {/* <Footer></Footer> */}
         </main>
       </UserContext.Provider>
     </Router>
