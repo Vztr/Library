@@ -6,7 +6,7 @@
     margin-right: 120px;
 }
 
-.List_books {    
+ul.List_books {    
     width: 100%;
     font-size: 18px;
     text-align: center;
@@ -16,6 +16,10 @@
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-around;
+    margin: 0 auto;
+    margin-left: 0px;
+    list-style: none;
+    text-decoration: none;
 }
 
 .List_books_item {
@@ -23,6 +27,7 @@
     width: 100%;
     height: auto;
     margin: 0px 40px 0px 40px;
+    list-style: none;
 }
 
 img {

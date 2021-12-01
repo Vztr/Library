@@ -35,24 +35,25 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="register">
-      <form onSubmit={submitForm} >
-      <div className="Input_Container ">
-      👤
-        <input className="input" type="text" name="name" value={registerForm.name} onChange={handleInput} placeholder="Nombre"/>
-      </div>
-      <div> 
-      👤
-        <input className="input" type="text" name="lastname" value={registerForm.lastname} onChange={handleInput} placeholder="Apellido"/>
-      </div> 
-      <div>
-      ✉️
-        <input className="input" type="text" name="email" value={registerForm.email} onChange={handleInput} placeholder="E-mail"/>
-      </div>  
-      <div>
-      🔑
-        <input className="input" type="password" name="password" value={registerForm.password} onChange={handleInput} placeholder="Contraseña"/>
-      </div>  
+    <div className="register-container">
+      <form className="register" onSubmit={submitForm} >
+        <div className="Input_Container">
+          <h1>Regístrate</h1>
+          <label>Nombre 🙍</label>
+          <input className="input" type="text" name="name" value={registerForm.name} onChange={handleInput} placeholder="Nombre" />
+        </div>
+        <div>
+          <label>Apellidos 🙍</label>
+          <input className="input" type="text" name="lastname" value={registerForm.lastname} onChange={handleInput} placeholder="Apellido" />
+        </div>
+        <div>
+          <label>E-mail ✉️</label>
+          <input className="input" type="text" name="email" value={registerForm.email} onChange={handleInput} placeholder="E-mail" />
+        </div>
+        <div>
+          <label>Password 🔑</label>
+          <input className="input" type="password" name="password" value={registerForm.password} onChange={handleInput} placeholder="Contraseña" />
+        </div>
         <button className="button" type="submit">Registrar usuario</button>
         {error && <div style={{ color: "red" }}>{error}</div>}
       </form>

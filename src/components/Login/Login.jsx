@@ -32,15 +32,16 @@ const LoginForm = () => {
       <div className="login-container">
         <form className="login" onSubmit={submitForm}>
           <div className="form-group">
-            <label>👤</label>
+            <h1>Sign In</h1>
+            <label>E-mail 🙍</label>
             <input className="input" type="text" name="email" placeholder="E-mail" />
           </div>
           <div>
-            <label>🔑</label>
-            <input className="input" type="password" name="password" placeholder="Contraseña" />
+            <label>Password 🔑</label>
+            <input className="input" type="password" name="password" placeholder="Password" />
           </div>
           <div>
-            <button className="button" type="submit">LOGIN</button>
+            <button className="button" type="submit">Login</button>
           </div>
         </form>
       </div>

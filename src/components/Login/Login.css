@@ -1,42 +1,18 @@
-/* .login {
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    padding: 17px;
-    width: 300px;
-    position: absolute;
-    top: 50%;
-    left: 54%;
-    transform: translate(-50%, -50%);
-    border: 2px solid black;
-}
-
-.button {
-    margin-left: 40px;
-    margin-top: 15px;
-    background-color: black;
-    color: white;
-    padding: 3px;
-    font-size: 10px;
-}
-
-.input {
-    margin: 10px;
-    border: 1px solid black;
-} */
-
 .login-container {
-    background-color: rgba(255, 255, 255, .05);
-    width: 475px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background-repeat: no-repeat;
     padding: 45px 25px;
     border-radius: 25px;
     box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.2);
+    max-height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 73px;    
 }
-    
 
 .login {
     display: flex;
@@ -51,33 +27,46 @@
 }
         
 label {
-    text-align: left;
-    font-size: 13px;
-    opacity: .7;
+    text-align: center;
+    font-size: 14px;
     padding: 10px 0px;
 }
         
 .input {
     margin-bottom: 25px;
-    height: 40px;
+    height: 25px;
     width: 100%;
-    color: rgba(255,255,255, .3);
-    background: rgba(0,0,0,0);
+    background: rgba(255, 255, 255, 0);
     border-bottom: 2px solid rgba(255,255,255, .3);
-    font-size: 13px;
-    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.input:focus {
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgba(255,255,255, 1);
+    font-size: 12px;
+    font-weight: 400
+}
+
+.input::placeholder {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
     text-align: center;
-    transition: .5s ease-in-out;
+}
+
+.input:hover {
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.1);
 }
     
 .button {
     background: rgba(255, 255, 255, .1);
-    padding: 15px;
-    margin: 20px 0px;
+    padding: 7px;
+    margin: 10px 0px;
     border-radius: 25px;
     font-size: 14px;
     color: #fff;
-    transition: .5s ease-in-out;
     cursor: pointer;
 }
     
@@ -85,3 +74,11 @@ label {
     background: rgba(255, 255, 255, .13);
     box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.1);
 }
+
+h1 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
