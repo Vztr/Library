@@ -1,121 +1,114 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swapp');
 
-.footer {
+.site-footer {     
+  border-top: 1.5px solid #e1e1e1;
+  background-color: black;   
+  /* background: linear-gradient(35deg,#fbab98, #fb2253 ); */
+  padding-top: .5rem;     
+  padding-top: .8rem; 
   position: relative;
-  width: 100%;
-  background: #3586ff;
-  min-height: 100px;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
+  min-width: 100%;
   bottom: 0;
-}
+  margin-top: 20px;
 
-.social-icon,
-.menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
+} 
 
-.social-icon__item,
-.menu__item {
-  list-style: none;
-}
+.titles_footer {     
+  margin-bottom: .2rem;     
+  text-align: center;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+ } 
 
-.social-icon__link {
-  font-size: 2rem;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
+ .description {   
+  width: 80%;
+  margin: auto;
+  text-align: center; 
+  line-height: 19px; 
+  margin-top: .4rem;   
+  font-size: 10px; 
+  font-family: 'Merriweather', serif;
 }
-.social-icon__link:hover {
-  transform: translateY(-10px);
-}
+ 
+ @media (min-width: 768px) {     
+   .titles_footer {      
+     margin-bottom: .2rem;    
+     text-align: left;
+     color: #ffffff;
+     font-size: 13px;
+     font-family: 'Roboto', sans-serif;
+  }    
 
-.menu__link {
-  font-size: 1.2rem;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
+  .description {     
+    width: 80%;
+    margin: auto;
+    text-align: center; 
+    margin-top: .4rem;   
+    font-size: 10px; 
+    font-family: 'Merriweather', serif; 
+  }
+
+    .grid-footer {         
+      display: grid;        
+      grid-template-columns: repeat(3, 1fr);         
+      gap: 1.5rem;
+  } 
+}  
+
+.grid-footer > div {     
+  margin-bottom: 1.5rem;
+} 
+
+@media (min-width: 768px) { 
+   .grid-footer > div {        
+      margin: 0;
+  }
+}   
+
+.footer-menu a {     
+  display: block;     
+  text-align: center;
+  color: #ffffff;
+  font-size: 11px;
+  font-family: 'Merriweather', serif;
+  margin: 5px 0px;
   text-decoration: none;
-  opacity: 0.75;
-  font-weight: 300;
-  width: 30px;
-  height: auto;
 }
 
-.menu__link:hover {
-  opacity: 1;
+.footer-menu a:hover {     
+  display: block;     
+  text-align: center;
+  color: #fb2253;
+  font-size: 11px;
+  font-family: 'Merriweather', serif;
+  margin: 5px 0px;
+  text-decoration: none;
 }
 
-.footer p {
-  color: #fff;
-  margin: 15px 0 10px 0;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.wave {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: url("https://i.ibb.co/wQZVxxk/wave.png");
-  background-size: 1000px 100px;
-}
-
-.wave#wave1 {
-  z-index: 1000;
-  opacity: 1;
-  bottom: 0;
-  animation: animateWaves 4s linear infinite;
-}
-
-.wave#wave2 {
-  z-index: 999;
-  opacity: 0.5;
-  bottom: 10px;
-  animation: animate 4s linear infinite !important;
-}
-
-.wave#wave3 {
-  z-index: 1000;
-  opacity: 0.2;
-  bottom: 15px;
-  animation: animateWaves 3s linear infinite;
-}
-
-.wave#wave4 {
-  z-index: 999;
-  opacity: 0.7;
-  bottom: 20px;
-  animation: animate 3s linear infinite;
-}
-
-@keyframes animateWaves {
-  0% {
-    background-position-x: 1000px;
+@media (min-width: 768px) {     
+   .footer-menu a {         
+     text-align: left;
+     color: #ffffff;
+     font-family: 'Merriweather', serif;
+     font-size: 11px;
   }
-  100% {
-    background-positon-x: 0px;
-  }
-}
 
-@keyframes animate {
-  0% {
-    background-position-x: -1000px;
+  .footer-menu a:hover {     
+    display: block;     
+    text-align: center;
+    color: #fb2253;
+    font-size: 11px;
+    font-family: 'Merriweather', serif;
+    margin: 5px 0px;
+    text-decoration: none;
   }
-  100% {
-    background-positon-x: 0px;
-  }
+}  
+
+.copyright {     
+  margin-top: 2rem;    
+   text-align: center;
+   padding-bottom: 17px;
+   font-size: 9px;
 }

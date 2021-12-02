@@ -2,61 +2,36 @@ import React from 'react'
 import "../Footer/Footer.css"
 const Footer = () => {
     return (
-        <div>
-            <footer id="footer" className="footer-1">
-                <div className="main-footer widgets-dark typo-light">
-                    <div className="container">
-                        <div className="row">
-
-                            <div className="col-xs-12 col-sm-6 col-md-3">
-                                <div className="widget subscribe no-box">
-                                    <h5 className="widget-title"><span>INFINITE BOOKS</span></h5>
-                                    <p>About the company, little discription will goes here.. </p>
-                                </div>
-                            </div>
-
-                            <div className="col-xs-12 col-sm-6 col-md-3">
-                                <div className="widget no-box">
-                                    <h5 className="widget-title"><span>Proyecto realizado con las siguientes herramientas:</span></h5>
-                                    <ul className="thumbnail-widget">
-                                        <li>
-                                            <div className="thumb-content"><a href="#.">React</a></div>
-                                        </li>
-                                        <li>
-                                            <div className="thumb-content"><a href="#.">Mongo DB</a></div>
-                                        </li>
-                                        <li>
-                                            <div className="thumb-content"><a href="#.">HTML & CSS</a></div>
-                                        </li>
-                                        <li>
-                                            <div className="thumb-content"><a href="#.">Event/Tickets</a></div>
-                                        </li>
-                                        <li>
-                                            <div className="thumb-content"><a href="#.">News</a></div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="col-xs-12 col-sm-6 col-md-3">
-
-                                <div className="widget no-box">
-                                    <h5 className="widget-title"><span>Contact Us</span></h5>
-
-                                    <p><a href="mailto:info@infiniteposters.com" title="glorythemes">info@infiniteposters.com</a></p>
-                                    <ul className="social-footer2">
-                                        <li className=""><a href="#"></a></li>
-                                        <li className=""><a href="#"></a></li>
-                                        <li className=""><a href="#"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+        <footer className="site-footer">
+            <div className="grid-footer">
+                <div>
+                    <h3 className="titles_footer">INFINITE POSTERS</h3>
+                    <p className="description">La aplicación para descargar los posters de tus películas y series favoritas</p>
                 </div>
-            </footer>
-        </div>
+
+                <div>
+                    <h3 className="titles_footer">App hecha con:</h3>
+                    <nav className="footer-menu">
+                        <a target="_blank" href="https://es.reactjs.org/">React</a>
+                        <a target="_blank" href="https://www.mongodb.com/atlas/database">Mongo DB</a>
+                        <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML">HTML</a>
+                        <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a>
+                    </nav>
+                </div>
+
+                {/* <div>
+                    <h3 className="titles_footer">Soporte</h3>
+                    <nav className="footer-menu">
+                        <a href="#">Preguntas Frecuentes</a>
+                        <a href="#">Ayuda en línea</a>
+                        <a href="#">Confianza y Seguridad</a>
+                    </nav>
+                </div> */}
+
+            </div>
+
+            <p className="copyright">All rights reserved, INFINITE POSTERS™ 2021</p>
+        </footer>
     );
 };
 

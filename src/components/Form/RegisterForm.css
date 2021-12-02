@@ -4,14 +4,14 @@
     border-radius: 25px;
     box-shadow: 0px 0px 45px 0px rgba(0,0,0,0.2);
     max-height: 100%;
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     margin-top: 30px;
-    margin-bottom: 73px;    
+    margin-bottom: 60px;    
 }
 
 .register {
@@ -24,12 +24,13 @@
 .Input_Container {
     display: flex;
     flex-direction: column;
+    height: auto;
 }
         
-label {
+.Icono_register {
     text-align: center;
-    font-size: 14px;
-    padding: 10px 0px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
         
 .input {
@@ -60,8 +61,8 @@ label {
     box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.1);
 }
     
-.button {
-    background: rgba(255, 255, 255, .1);
+.button_form {
+    background-color: #000000;
     padding: 6px;
     margin: 7px 0px;
     border-radius: 25px;
@@ -70,15 +71,17 @@ label {
     cursor: pointer;
 }
     
-.button:hover {
-    background: rgba(255, 255, 255, .13);
-    box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.1);
+.button_form:hover {
+    background: #fff;
+    color: #000000;
 }
 
-h1 {
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    letter-spacing: 2px;
+h3 {
+    color: rgb(21, 16, 26);
+    font-weight: bolder;
+    font-size: 35px;
+    font-family: 'Comforter', cursive;
+    text-align: center;
+    margin: 1px;
 }
 

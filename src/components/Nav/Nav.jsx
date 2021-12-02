@@ -24,35 +24,35 @@ const Navbar = ({ handleClick }) => {
             <nav className="nav">
                 <ul>
                     <li>
-                        <Link to="/" onClick={handleClick}>
+                        <Link className="button_nav" to="/" onClick={handleClick}>
                             <img src="https://i.imgur.com/LWsPh0q.png" alt="logo"></img>
                         </Link>
                     </li>
                     <li>
                         {user && (
-                            <Link to="/books" onClick={handleClick}>
+                            <Link className="button_nav" to="/books" onClick={handleClick}>
                                 Posters
                             </Link>
                         )}
                     </li>
                     <li>
                         {user && (
-                            <Link to="/logout" onClick={handleClick}>
-                                Cerrar sesión
+                            <Link className="button_nav" to="/logout" onClick={handleClick}>
+                                Logout
                             </Link>
                         )}
                     </li>
                     <li>
                     {!user && (
-                        <Link to="/form" onClick={handleClick}>
-                           Registrate
+                        <Link className="button_nav" to="/form" onClick={handleClick}>
+                           Register
                         </Link>
                     )}
                     </li>
                     <li>
                     {!user && (
-                        <Link to="/login" onClick={handleClick}>
-                           Inicia sesión
+                        <Link className="button_nav" to="/login" onClick={handleClick}>
+                           Login
                         </Link>
                     )}
                     </li>

@@ -1,15 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swapp');
+
+
 .Home_Container {
-
+    height: auto;
+    width: 100%;
+   /*  background: linear-gradient(35deg, #feb47b, #ff7e5f /* #fbab98, #fb2253 ); */
+    position: relative;
+    min-height: 100vh;
 }
 
-img {
-    width: "100%";
-    margin: 0;
-    padding: 0;
+.img_home {
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0px;
 }
 
-p {
-    text-align: center;
-    font-size: 16px;
+.title_description {
+    color: rgb(21, 16, 26);
     font-weight: 700;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.description_home {
+    width: 80%;
+    text-align: justify;
+    font-size: 11px;
+    font-family: 'Merriweather', serif;
+    font-weight: 800;
+    color: #000000;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin: auto;
 }

@@ -1,13 +1,11 @@
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(35deg, #feb47b, #ff7e5f /* #fbab98, #fb2253 */);
+ background: linear-gradient(35deg, /*#feb47b, #ff7e5f */ #fbab98, #fb2253 );
   font-family: sans-serif;
   color: #fff;
 }
-
+/* 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */

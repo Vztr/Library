@@ -44,7 +44,7 @@ export const registerUser = async form => {
   });
   const res = await registerFetch.json();
   if (!registerFetch.ok) {
-    throw new Error('No se ha podido realizar el registro', res.message);
+    throw new Error('¡Vaya! Parece que faltan datos', res.message);
   }
   return res;
 };

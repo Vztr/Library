@@ -39,23 +39,25 @@ const RegisterForm = () => {
       <form className="register" onSubmit={submitForm} >
         <div className="Input_Container">
           <h1>Regístrate</h1>
-          <label>Nombre 🙍</label>
-          <input className="input" type="text" name="name" value={registerForm.name} onChange={handleInput} placeholder="Nombre" />
+          <div>
+            <label className="Icono_register">🙍</label>
+            <input className="input" type="text" name="name" value={registerForm.name} onChange={handleInput} placeholder="Nombre" />
+          </div>
+          <div>
+            <label className="Icono_register">🙍</label>
+            <input className="input" type="text" name="lastname" value={registerForm.lastname} onChange={handleInput} placeholder="Apellido" />
+          </div>
+          <div>
+            <label className="Icono_register">📧</label>
+            <input className="input" type="text" name="email" value={registerForm.email} onChange={handleInput} placeholder="E-mail" />
+          </div>
+          <div>
+            <label className="Icono_register">🔑</label>
+            <input className="input" type="password" name="password" value={registerForm.password} onChange={handleInput} placeholder="Contraseña" />
+          </div>
+          <button className="button_form" type="submit">Registrar usuario</button>
+          {error && <div style={{ color: "#ffffff", fontWeight: "bold", paddingTop: "10px" }}>{error}</div>}
         </div>
-        <div>
-          <label>Apellidos 🙍</label>
-          <input className="input" type="text" name="lastname" value={registerForm.lastname} onChange={handleInput} placeholder="Apellido" />
-        </div>
-        <div>
-          <label>E-mail ✉️</label>
-          <input className="input" type="text" name="email" value={registerForm.email} onChange={handleInput} placeholder="E-mail" />
-        </div>
-        <div>
-          <label>Password 🔑</label>
-          <input className="input" type="password" name="password" value={registerForm.password} onChange={handleInput} placeholder="Contraseña" />
-        </div>
-        <button className="button" type="submit">Registrar usuario</button>
-        {error && <div style={{ color: "red" }}>{error}</div>}
       </form>
     </div>
   );

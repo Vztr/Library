@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swapp');
 
-.Container {
+.Container_gallery {
     text-align: center;
     margin-top: 60px; 
     margin-left: 120px;
     margin-right: 120px;
 }
 
-ul.List_books {    
-    width: 100%;
+ul.List_posters {    
+    width: 80%;
     font-size: 18px;
     text-align: center;
     list-style: none;
@@ -16,63 +18,53 @@ ul.List_books {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-around;
-    margin: 0 auto;
-    margin-left: 0px;
+    margin: auto;
     list-style: none;
     text-decoration: none;
+    padding: 0px;
 }
 
-.List_books_item {
-    align-items: center;
-    width: 100%;
-    height: auto;
-    margin: 0px 40px 0px 40px;
-    list-style: none;
+.List_poster_item {
+    margin-bottom: 40px;
 }
 
-img {
+.poster_img {
     width: 200px;
-    height: auto;
+    height: 275px;
     padding: 20px;
-    margin-top: 25px;
+    margin: 0px;
 }
 
-h4 {
+.title_img {
     text-align: center;
-    letter-spacing: 0.75 px;
     font-weight: bold;
     text-transform: uppercase;
-    margin: auto;
-}
-
-p {
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    font-family:'Times New Roman', Times, serif;
     margin: auto;
-    padding-bottom: 20px;
 }
 
-a {
-    -webkit-backface-visibility:hidden;
-    backface-visibility:hidden;
-    position:relative;
-    transition:0.5s color ease;
-    text-decoration:none;
-    color:#141414;
-    font-size: 17px;
-    border: 2px solid #ff207d;
-    border-radius: 5px;
-    padding: 3px;
-    margin-top: 10px;
+.author_img {
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+    margin: auto;
+    padding-bottom: 8px;
+    padding-top: 4px;
 }
-a:hover{
+
+.download_button {
     color:#ffffff;
-    background-color: #ff207d;
     transition:0.5s color ease;
+    text-decoration: none;
+    padding: 6px;
 }
 
-a:after {
-    left:50%;
-    -webkit-transform:translateX(-50%);
-    transform:translateX(-50%);
+.download_button:hover {
+    color:#ffffff;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    transition:0.5s color ease;
+    text-decoration: none;
+    padding: 6px;
 }

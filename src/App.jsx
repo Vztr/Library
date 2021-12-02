@@ -32,7 +32,7 @@ const App = () => {
             return user ? <Redirect to='/' /> : <Login/>
           }} />
           <Route path="/login" component={Login} />
-          {/* <Footer></Footer> */}
+          <Footer></Footer>
         </main>
       </UserContext.Provider>
     </Router>
